@@ -3,10 +3,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CurrencyConverterGUI extends JFrame {
-    private JTextField txtAmount;
-    private JLabel lblResult;
-    private JComboBox<String> cmbCurrencies;
-    private JButton btnConvert;
+     JTextField txtAmount;
+     JLabel lblResult;
+    JComboBox<String> cmbCurrencies;
+    JButton btnConvert;
 
     public CurrencyConverterGUI() {
         setTitle("Currency Converter");
@@ -17,7 +17,7 @@ public class CurrencyConverterGUI extends JFrame {
         initComponents();
     }
 
-    private void initComponents() {
+    void initComponents() {
         JLabel lblAmount = new JLabel("Enter amount (PKR):");
         txtAmount = new JTextField(10);
         lblResult = new JLabel("Converted Amount: ");
@@ -43,7 +43,7 @@ public class CurrencyConverterGUI extends JFrame {
         add(lblResult);
     }
 
-    private void convertCurrency() {
+    void convertCurrency() {
         try {
             double amount = Double.parseDouble(txtAmount.getText());
             String selectedCurrency = cmbCurrencies.getSelectedItem().toString();
